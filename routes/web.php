@@ -15,16 +15,6 @@ use Josefo727\GeneralSettings\Http\Controllers\Admin\GeneralSettingController;
 |
 */
 
-Route::get('/', function () {
-    if (app()->environment('production')) {
-        $url = 'https://www.diunsa.hn/';
-
-        return redirect()->away($url);
-    }
-
-    return view('welcome');
-});
-
 Auth::routes([
     'register' => false,
     'confirm' => false,
